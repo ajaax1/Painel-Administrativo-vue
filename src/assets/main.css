@@ -1,0 +1,41 @@
+@import './base.css';
+#app {
+  font-weight: bold;
+  background-color: #24283b;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: rgb(177, 170, 196);
+}
+.screen {
+  max-width: 100dvw;
+  min-height: 100dvh;
+  display: flex;
+}
+.content{
+  width: 80%;
+  min-height: 100%;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .content{
+    width: 90%;
+    min-height: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    
+  }
+  .screen {
+    max-width: 100dvw;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+
+
