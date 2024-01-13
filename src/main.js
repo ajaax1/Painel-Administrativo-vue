@@ -5,7 +5,7 @@ import App from './App.vue';
 import { createRouter, createWebHashHistory } from "vue-router";
 import RouteCrudAdm from './views/RouteCrudAdm.vue'; 
 import RouteCrudNewsPaper from './views/RouteCrudNewsPaper.vue';  
-import Home from './views/home.vue';
+import Home from './views/Home.vue';
 const router = createRouter({
   history: createWebHashHistory(),
   routes:[
