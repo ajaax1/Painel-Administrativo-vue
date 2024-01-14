@@ -24,7 +24,7 @@
     </div>
     <ul v-show="isVisible" class="ul-option">
       <li :class="{ 'active': currentRoute === '/CrudAdm' }">
-        <router-link style="width: 100%;" to="/CrudAdm">
+        <router-link  style="width: 100%;" to="/CrudAdm">
           <span class="material-symbols-outlined"> radio_button_unchecked </span>
           Administrators
         </router-link>
@@ -128,7 +128,6 @@ li span {
 
 li:hover {
   background-color: #6059c0;
-  color: white;
 }
 
 .logo-text {
@@ -157,7 +156,6 @@ li:hover {
 
 .active {
   background-color: #6059c0;
-  color: white;
 }
 
 @keyframes changeColor {

@@ -5,22 +5,29 @@
       <button @click="showInputs()" class="button add">{{ showButtonText }}</button>
     </div>
     <form v-show="firstSectionShow" class="section inputs">
-      <label for="">Title</label>
-      <input placeholder=" ..." type="text" />
-      <label for="">Paragraph 1</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
-      <label for="">Paragraph 2</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
-      <label for="">Paragraph 3</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
-      <label for="">Paragraph 4</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
-      <label for="">Paragraph 5</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
-      <label for="">Paragraph 6</label>
-      <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      <label>Title
+        <input placeholder=" ..." type="text" />
+      </label>
+      <label>Paragraph 1
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
+      <label>Paragraph 2
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
+      <label>Paragraph 3
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
+      <label>Paragraph 4
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
+      <label>Paragraph 5
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
+      <label>Paragraph 6
+        <textarea placeholder="..." maxlength="100" rows="4"></textarea>
+      </label>
       <input placeholder="Image" type="file" accept="image/*" />
-      <button type="button" class="button send">Send</button>
+      <button type="button send" class="button send">Send</button>
     </form>
     <div class="section table" v-show="secondSectionShow">
       <form class="search-button">
@@ -50,18 +57,18 @@
           </thead>
           <tbody>
             <tr>
+              <td>1</td>
+              <td>US imposes sanctions over...</td>
+              <td>US-imposes-sanctions-over</td>
+              <td>The United States has imposed...</td>
+              <td>The move comes after Washington and its allies...</td>
               <td></td>
               <td></td>
               <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
+              <td>./assets</td>
+              <td>21/07/2004</td>
+              <td>13:00</td>
+              <td>Joao</td>
               <td></td>
               <td>
                 <button class="button update"><a href="">Update</a></button>
@@ -107,16 +114,19 @@ h1 {
   font-size: 1.5rem;
   color: rgb(177, 170, 196);
 }
-.section{
+
+.section {
   background: #2e3248;
   border-radius: 0.5rem;
 }
+
 table {
   border-collapse: collapse;
   margin-top: 20px;
   color: rgb(177, 170, 196);
 }
-.table{
+
+.table {
   background: #2e3248;
   border-radius: 0.3rem;
   padding: 1rem;
@@ -124,15 +134,18 @@ table {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+
 th,
 td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
 }
+
 th {
   background-color: #24283b;
 }
+
 .title-button {
   display: flex;
   align-items: center;
@@ -141,32 +154,29 @@ th {
   padding: 0.5rem;
 }
 
-button{
-  border-color: rgb(177, 170, 196);
-  color: rgb(177, 170, 196) ;
+.button {
+  color: rgb(177, 170, 196);
   height: 2rem;
-  border-width: 0.5px;
   border-radius: 0.3rem;
   text-align: center;
   padding: 0.2rem;
+  border-style: none;
+  background-color: #6059c0;
 }
-.update{
+
+.update {
   background-color: rgb(0, 1, 51);
 }
-.delete{
+
+.delete {
   background-color: rgb(80, 0, 0);
 }
-.add{
-  background-color: rgb(41, 41, 41);
+
+.send {
+  background-color: rgb(70, 70, 70);
+  width: 7rem;
 }
-.send{
-  background-color: rgb(68, 68, 68);
-  width: 5rem;
-}
-.search{
-  background-color: rgb(68, 68, 68);
-  width: 4rem;
-}
+
 .inputs {
   background: #2e3248;
   border-radius: 1rem;
@@ -175,6 +185,7 @@ button{
   width: 100%;
   text-decoration: none;
 }
+
 .inputs input {
   width: 100%;
   height: 2rem;
@@ -188,36 +199,48 @@ button{
 }
 
 .inputs input[type="text"] {
-  border-radius: 0.3rem;
-  height: 2rem;
-  border-style: none;
+  background: #2e3248;
+  height: 2.1rem;
+  border-width: 0.1rem;
+  width: 100%;
+  border-style: solid;
+  border-color: rgb(177, 170, 196);
+  border-radius: 0.3rem
 }
 
 .inputs textarea {
+  background: #2e3248;
+  min-height: 4rem;
+  max-height: 6rem;
   max-width: 100%;
   min-width: 100%;
-  min-height: 4rem;
-  max-height: 5rem;
-  margin-bottom: 0.5rem;
-  border-radius: 0.3rem;
+  border-width: 0.1rem;
+  width: 100%;
+  border-style: solid;
+  border-color: rgb(177, 170, 196);
+  border-radius: 0.3rem
 }
+
 .search-button {
   width: 100%;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
-.input-search{
+
+.input-search {
   height: 2.1rem;
   border-width: 0.5px;
   width: 15rem;
   border-radius: 0.3rem;
 }
+
 @media only screen and (max-width: 1000px) {
-  .title h1{
+  .title h1 {
     font-size: 1.5rem;
   }
-  .title-button{
+
+  .title-button {
     flex-wrap: wrap;
   }
 }
